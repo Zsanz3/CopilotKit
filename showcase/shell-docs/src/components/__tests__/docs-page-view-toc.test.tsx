@@ -72,6 +72,13 @@ describe("DocsPageView table of contents", () => {
     expect(page.props.toc).not.toEqual([]);
     expect(page.props.tableOfContentPopover).toEqual({ enabled: true });
   });
+
+  it("renders the LangGraph quickstart (InlineDemo + ApiKeyHint) without errors", async () => {
+    const page = await renderDocsPage("integrations/langgraph/quickstart");
+
+    expect(page.props.toc).toEqual([]);
+    expect(page.props.tableOfContentPopover).toEqual({ enabled: false });
+  });
 });
 
 describe("DocsPageView breadcrumbs", () => {

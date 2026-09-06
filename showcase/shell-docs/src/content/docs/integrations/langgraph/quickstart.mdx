@@ -12,6 +12,12 @@ import OpenInspectorStep from "@/snippets/shared/inspector/open-inspector-step.m
   surface="docs_langgraph_quickstart"
 />
 
+## See it working
+
+No setup needed — this is a live CopilotKit chat running against a LangGraph agent. Try it before you follow the steps below:
+
+<InlineDemo demo="agentic-chat" />
+
 ## Prerequisites
 
 Before you begin, you'll need the following:
@@ -72,6 +78,8 @@ Before you begin, you'll need the following:
                 ```plaintext title=".env"
                 OPENAI_API_KEY=your_openai_api_key
                 ```
+
+                <ApiKeyHint provider="openai" />
 
                 <Callout type="info" title="What about other models?">
                   The starter template is configured to use OpenAI's GPT-4o by default, but you can modify it to use any language model supported by LangGraph.
@@ -303,6 +311,8 @@ Before you begin, you'll need the following:
               ```plaintext title=".env"
               OPENAI_API_KEY=your_openai_api_key
               ```
+
+              <ApiKeyHint provider="openai" />
 
               <Callout type="info" title="What about other models?">
                 The starter template is configured to use OpenAI's GPT-4o by default, but you can modify it to use any language model supported by LangGraph.

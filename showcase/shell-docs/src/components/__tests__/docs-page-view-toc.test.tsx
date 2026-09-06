@@ -79,6 +79,21 @@ describe("DocsPageView table of contents", () => {
     expect(page.props.toc).toEqual([]);
     expect(page.props.tableOfContentPopover).toEqual({ enabled: false });
   });
+
+  it("renders the LangGraph quickstart on the langgraph-python framework route", async () => {
+    const page = await DocsPageView({
+      slugPath: "integrations/langgraph/quickstart",
+      slugHrefPrefix: "",
+      frameworkOverride: "langgraph-python",
+      navTree: [],
+    });
+    const docsPage = findElementByType<ComponentProps<typeof DocsPage>>(
+      page,
+      DocsPage,
+    );
+
+    expect(docsPage).not.toBeNull();
+  });
 });
 
 describe("DocsPageView breadcrumbs", () => {
